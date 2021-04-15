@@ -1,0 +1,24 @@
+DELIMITER |
+CREATE PROCEDURE Lst_Commandes (IN obs varchar(30))
+BEGIN
+SELECT entcom.numcom AS 'numéro de commande'
+,obscom AS 'observation'
+,nomfou AS 'nom du fournisseur'
+,libart AS 'libellé du produit'
+,(qtecde * priuni) AS 'le sous total' 
+FROM entcom,fournis,produit,ligcom
+WHERE entcom.obscom LIKE CONCAT ('%',obs,'%')
+AND entcom.numfou=fournis.numfou
+AND ligcom.codart=produit.codart
+AND entcom.numcom=ligcom.numcom ;
+END |
+DELIMITER ;
+
+
+
+
+
+
+
+
+

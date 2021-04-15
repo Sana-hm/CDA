@@ -1,0 +1,14 @@
+DELIMITER |
+CREATE PROCEDURE CA_Fournisseur(
+IN codefou VARCHAR(25),
+IN annee YEAR 
+)
+BEGIN
+SELECT numfou, SUM(qtecde * priuni * 1.20) AS CA
+FROM ligcom,entcom
+WHERE ligcom.numcom=entcom.numcom
+AND annee=YEAR(datcom)
+GROUP BY numfou
+HAVING codefou=numfou ;
+END |
+DELIMITER ;
