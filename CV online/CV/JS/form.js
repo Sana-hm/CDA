@@ -1,15 +1,19 @@
-var nomForm = RegExp(/^[A-Za-z]+$/);
-var emailForm = RegExp(/^([a-zA-Z0-9_\.\-])+\@(([a-zA-Z0-9\-])+\.)+([a-zA-Z0-9]{2,4})+$/);
-var sujetForm = RegExp(/^[0-9A-Za-z\s]+$/);
-var messageForm = RegExp(/^[0-9A-Za-z\s]+$/);
 
-/*var validate = document.getElementsByClassName('btn');validate.onclick=*/
-function validate() {
-    var nomFa = document.getElementById("nom").value;
-    var emailFa = document.getElementById("mail").value;
-    var sujetFa = document.getElementById("sujet").value;
-    var messageFa = document.getElementById("message").value;
-    var bool = true;
+const nomForm = RegExp(/^[A-Za-z]+$/);
+const emailForm = RegExp(/^([a-zA-Z0-9_\.\-])+\@(([a-zA-Z0-9\-])+\.)+([a-zA-Z0-9]{2,4})+$/);
+const sujetForm = RegExp(/^[0-9A-Za-z\s]+$/);
+const messageForm = RegExp(/^[0-9A-Za-z\s]+$/);
+
+
+const button = document.getElementById("button");
+button.addEventListener("click",validateForm);
+
+function validateForm() {
+    const nomFa = document.getElementById("nom").value;
+    const emailFa = document.getElementById("mail").value;
+    const sujetFa = document.getElementById("sujet").value;
+    const messageFa = document.getElementById("message").value;
+    let bool = true;
 
 
 if(nomFa == ""){
@@ -45,7 +49,7 @@ if(sujetFa == ""){
     document.getElementById("sujetError").style.color = "red";
     bool = false; 
 }
-else if(!sujetFarm.test(sujetFa)){
+else if(!sujetForm.test(sujetFa)){
     document.getElementById("sujetError").innerHTML = "ce champ est incorrect!";
     document.getElementById("sujetError").style.color = "red";
     bool = false;
@@ -70,7 +74,6 @@ else{
 
 return bool;
 
-}
-
+};
 
 

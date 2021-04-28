@@ -207,8 +207,8 @@
 button {
   font-size: 25px;
   padding: 10px 20px;
-  margin: 50px 0 50px 140px;
   background-color: gray;
+  display: inline;
   border: none;
   outline: none;
   color: white;
@@ -216,19 +216,40 @@ button {
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
   cursor: pointer;
   transition: 0.5s;
+ 
 }
 button:hover {
   background-color: black;
   box-shadow: 0 0 30px rgba(0, 0, 0, 0.5);
 }
+.printbtn{
+  margin-left:200px; 
+  margin-bottom:20px ; 
+}
+.contactbtn{
+  margin-left:10px;
+}
+
+.shadow-dark {
+  -webkit-box-shadow: 0 0 20px rgb(48, 46, 77, 0.15);
+  box-shadow: 0 0 20px rgb(48, 46, 77, 0.15);
+}
+
 
 @media print {
   body * {
-    visibility: hidden;
+    visibility: visible;
   }
   print-area * {
     visibility: visible;
   }
+  .printbtn .contactbtn{
+    visibility: hidden;
+  }
+}
+i{
+  font-size: 40px;
+  color: gray;
 }
 /* For desktop: */
 .col-1 {
@@ -298,33 +319,10 @@ button:hover {
   .header-text h1 {
     font-size: 50px;
   }
-  .print {
-    position: relative;
-    display: flex;
-    justify-content: center;
-    padding: 80px;
-  }
-  .print {
-    position: absolute;
-    width: 80%;
+  .printbtn, .contactbtn{
+    margin:50px auto;
+    display: block;
   }
 }
-.shadow-dark {
-  -webkit-box-shadow: 0 0 20px rgb(48, 46, 77, 0.15);
-  box-shadow: 0 0 20px rgb(48, 46, 77, 0.15);
-}
 
-.contactbtn {
-  padding-right: 0;
-  justify-content: center;
-  display: inline-block;
-  padding-right: 20px;
-}
 
-.printbtn {
-  margin-left: 180px;
-}
-.contactbtn span {
-  text-align: center;
-  color: white;
-}
