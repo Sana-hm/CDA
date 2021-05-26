@@ -22,17 +22,15 @@ include '../controler/control-form-update.php';
 
         <div class="mt-3">
         <label for="artist" class="form-label">Artist</label>
-        <select class="form-select" id="artist" name="artist">
-        <option value=""></option>
+            <select class="form-select" id="artist" name="artist">
+            <option value=""></option>
             <?php 
             foreach ($artists as $artist) {
             ?>
-
-            <option value="<?php echo $artist->artist_id ?>" <?php if($disc->artist_id === $artist->artist_id) {echo 'selected';} ?>><?php echo $artist->artist_name ?></option>
-
+                <option value="<?php echo $artist->artist_id ?>" <?php if($disc->artist_id === $artist->artist_id) {echo 'selected';} ?>><?php echo $artist->artist_name ?></option>
             <?php } ?>
-        </select>
-        <span class="error"><?= isset($formError['artist']) ? $formError['artist'] : '' ?></span>
+             </select>
+              <span class="error"><?= isset($formError['artist']) ? $formError['artist'] : '' ?></span>
         </div>
 
         <div class="mt-3">
@@ -66,12 +64,11 @@ include '../controler/control-form-update.php';
         </div>
 
         <div class="mb-5 mt-4">
-                <input type="submit" class="btn btn-outline-primary" value="Modifier" name="validate">
-                <a href="../" class="btn btn-outline-danger">Retour</a>
+            <input type="submit" class="btn btn-outline-primary" value="Modifier" name="validate">
+            <a href="../" class="btn btn-outline-danger">Retour</a>
         </div>
-    <?php
-    } 
-    ?>
+        
+    <?php } ?>
     </form>
 
 <?php

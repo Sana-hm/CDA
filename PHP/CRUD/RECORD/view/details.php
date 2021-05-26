@@ -4,12 +4,13 @@ include 'header.php';
 include '../model/config.php';
 include '../model/read-details.php';
 ?>
+
 <div class="container">
     <h1>Details</h1>
       <form>
-         <?php 
-            foreach($discs as $disc) {
-         ?>  
+            <?php 
+                foreach($discs as $disc) {
+            ?>  
          <div class="row ">
             <div class="col">
                 <div class="mb-3">
@@ -38,11 +39,10 @@ include '../model/read-details.php';
                     <label for="price" class="form-label">Price</label>
                     <input type="text" class="form-control" id="price" name="price" value="<?php echo $disc->disc_price; ?>" disabled>
                 </div>
-                
             </div>
             <p>Picture</p>
             <div class="mb-3">
-                    <img src="../assets/img/<?php echo $disc->disc_picture; ?>"  class="img-top img-fluid mt-1" alt="<?php echo $disc->disc_picture; ?>">
+                <img src="../assets/img/<?php echo $disc->disc_picture; ?>"  class="img-top img-fluid mt-1" alt="<?php echo $disc->disc_picture; ?>">
             </div>
 
             <div class="mt-1 mb-5">

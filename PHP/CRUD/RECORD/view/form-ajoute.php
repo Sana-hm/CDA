@@ -5,11 +5,11 @@ include '../model/config.php';
 include '../model/read-artist.php';
 include '../controler/control-form-ajoute.php';
 ?>
+
 <div class="container mt-3">
     <h1>Ajouter un vinyle</h1>
 
       <form action="#" method="POST" enctype="multipart/form-data">
-
         <div class="mt-4">
             <label for="title" class="form-label">Title</label>
             <input type="text" class="form-control" id="title" name="title" placeholder="Enter title" value="<?= isset($_POST['title']) ? $_POST['title'] : '' ?>">
@@ -20,13 +20,12 @@ include '../controler/control-form-ajoute.php';
         <label for="artist" class="form-label">Artist</label>
         <select class="form-select" id="artist" name="artist">
             <option value=""></option>
-            <?php 
-            foreach ($artists as $artist) {
-            ?>
+                <?php 
+                foreach ($artists as $artist) {
+                ?>
 
             <option value="<?php echo $artist->artist_id ?>" <?php if(isset($_POST['artist'])){ if($_POST['artist'] === $artist->artist_id){ echo 'selected'; }} ?>><?php echo $artist->artist_name ?></option>
-
-            <?php } ?>
+                <?php } ?>
         </select>
         <span class="error"><?= isset($formError['artist']) ? $formError['artist'] : '' ?></span>
         </div>
@@ -62,8 +61,8 @@ include '../controler/control-form-ajoute.php';
         </div>
 
         <div class="mb-5 mt-4">
-                <input type="submit" class="btn btn-outline-primary" value="Ajouter" name="validate">
-                <a href="../" class="btn btn-outline-danger">Retour</a>
+            <input type="submit" class="btn btn-outline-primary" value="Ajouter" name="validate">
+            <a href="../" class="btn btn-outline-danger">Retour</a>
         </div>
     </form>
 

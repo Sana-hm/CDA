@@ -9,5 +9,4 @@ if(isset($_POST['supprim'])){
     } catch (PDOException $e) {
         // echo $e->getMessage();
     }
-
 }
