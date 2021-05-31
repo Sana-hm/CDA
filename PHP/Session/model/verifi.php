@@ -15,7 +15,7 @@ $prenom = $_POST['prenom'];
 $mail = $_POST['mail'];
 $password = $_POST['pass'];
 
-if(isset($_POST['']) && isset($_POST[''])){
+if(isset($_POST['submit']) && isset($_POST['login'])){
 $nom = htmlspecialchars($_POST['nom']);
 $prenom = htmlspecialchars($_POST['prenom']);
 $mail = htmlspecialchars($_POST['mail']);

@@ -40,7 +40,7 @@ class employe {
             }
                 public function dateJour() {
                     $anne = $this->_DateEmbauche->diff($this->_date); //calcule pour différence les deux dates
-                    return $anne->y; 
+                    return $anne;
                 }
 
 

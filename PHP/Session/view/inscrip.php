@@ -29,7 +29,7 @@ include 'header.php';
         </div>
 
         <div class="text-center mt-5">
-            <button type="submit" class="btn btn-outline-dark shadow">Envoyer</button>
+            <button type="submit" name="submit" class="btn btn-outline-dark shadow">Envoyer</button>
         </div>
     </form>
  </div>
