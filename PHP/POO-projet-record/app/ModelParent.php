@@ -12,6 +12,7 @@ abstract class ModelParent {
     public string $id;
 
     public function getConnection() {
+        
         $this->_con = null;
 
         try {
