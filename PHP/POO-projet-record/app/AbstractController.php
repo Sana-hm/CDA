@@ -9,6 +9,11 @@ abstract class AbstractController {
         return new $model;
     }
 
+    public function loadFunction(){
+        require_once(ROOT . '/function/function.php');
+        return new Functions;
+    }
+
     public function render(string $file, array $data = []) {
 
             extract($data);

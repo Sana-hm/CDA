@@ -39,8 +39,7 @@ if(!$param['1'] == '') {
             echo 'Le controleur demandé n\'exidte pas' ;
         }
     }else{
-        require_once(ROOT . '/controllers/Home.php');
-        $home = new Home;
-        call_user_func_array([$home, 'index'], $param);
+        
+        header('Location:/Discs/index');
 
     }

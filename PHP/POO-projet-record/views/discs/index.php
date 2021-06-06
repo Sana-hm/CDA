@@ -1,8 +1,10 @@
-
+<?php
+$PageTitle = "Accueil";
+?>
 <div class="container">
     <div class="d-flex my-5">     
         <h1>Liste des disques</h1>
-        <div class="ms-auto"><a href="" class="btn btn-secondary shadow">Ajouter</a></div>       
+        <div class="ms-auto"><a href="/Discs/add" class="btn btn-secondary shadow">Ajouter</a></div>       
     </div>
 
 

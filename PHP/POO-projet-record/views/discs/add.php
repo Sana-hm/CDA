@@ -1,9 +1,5 @@
 <?php
-$title = 'form-ajoute';
-include 'header.php';
-include '../model/config.php';
-include '../model/read-artist.php';
-include '../controler/control-form-ajoute.php';
+$PageTitle = 'Ajouter';
 ?>
 
 <div class="container mt-3">
@@ -65,7 +61,3 @@ include '../controler/control-form-ajoute.php';
             <a href="../" class="btn btn-outline-danger">Retour</a>
         </div>
     </form>
-
-<?php
-include 'footer.php';
-?>
