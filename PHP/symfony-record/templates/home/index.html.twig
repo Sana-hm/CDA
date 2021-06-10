@@ -1,0 +1,17 @@
+ {% extends "base.html.twig" %} 
+
+ {% block title %} Acceuil {% endblock %}
+
+ {% block body %}
+       <div class="row">
+        <div class="col-sm-12">
+            <h1>Page d'accueil</h1>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-sm-12 mt-5">
+            <a href="{{ path('secondPage') }}" class="btn btn-secondary">Vers page 2</a>
+        </div>
+    </div>
+
+ {% endblock %}
