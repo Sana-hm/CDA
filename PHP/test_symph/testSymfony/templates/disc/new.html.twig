@@ -1,0 +1,61 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}New Disc{% endblock %}
+
+{% block body %}
+    <h1>Ajouter un vinyle</h1>
+
+
+
+
+    <form>
+        <div class="mt-4">
+            <label for="title" class="form-label">Title</label>
+            <input type="text" class="form-control" id="title" name="title" placeholder="Enter title" value="{{ disc.discTitle }}">
+        </div>
+
+        <div class="mt-3">
+            <label for="artist" class="form-label">Artist</label>
+            <select class="form-select" id="artist" name="artist">
+                <option value=""></option>
+                <?php
+                foreach ($artists as $artist) {
+                ?>
+
+                <option value="<?php echo $artist->artist_id ?>" <?php if(isset($_POST['artist'])){ if($_POST['artist'] === $artist->artist_id){ echo 'selected'; }} ?>><?php echo $artist->artist_name ?></option>
+                <?php } ?>
+            </select>
+        </div>
+
+        <div class="mt-3">
+            <label for="year" class="form-label">Year</label>
+            <input type="text" class="form-control" id="year" name="year" placeholder="Enter year" value="{{ disc.discYear }}">
+        </div>
+
+        <div class="mt-3">
+            <label for="genre" class="form-label">Genre</label>
+            <input type="text" class="form-control" id="genre" name="genre" placeholder="Enter genre (Rock, Pop, Prog...)" value="{{ disc.discGenre }}">
+        </div>
+
+        <div class="mt-3">
+            <label for="label" class="form-label">Label</label>
+            <input type="text" class="form-control" id="label" name="label" placeholder="Enter label (EMl, Warner, PolyGram, Univers sale...)" value="{{ disc.discLabel }}">
+        </div>
+
+        <div class="mt-3">
+            <label for="price" class="form-label">Price</label>
+            <input type="text" class="form-control" id="price" name="price" value="{{ disc.discPrice }}">
+        </div>
+
+        <div class="mt-2 mb-2">
+            <p>Picture</p>
+            <input type="file" value="Choisir un fichier"  name="fileToUpload" id="fileToUpload">
+        </div>
+
+        <div class="mb-5 mt-4">
+            <input type="submit" class="btn btn-outline-primary" value="Ajouter" name="validate">
+            <a href="{{ path('disc_index') }}" class="btn btn-outline-danger">Retour</a>
+        </div>
+    </form>
+
+{% endblock %}

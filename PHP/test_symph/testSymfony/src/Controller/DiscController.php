@@ -12,7 +12,7 @@ use Symfony\Component\Routing\Annotation\Route;
 /**
  * @Route("/disc")
  */
-class HomeController extends AbstractController
+class DiscController extends AbstractController
 {
     /**
      * @Route("/", name="disc_index", methods={"GET"})

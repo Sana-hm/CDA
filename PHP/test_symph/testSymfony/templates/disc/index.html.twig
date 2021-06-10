@@ -1,0 +1,34 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Disc index{% endblock %}
+
+{% block body %}
+
+    <div class="d-flex my-5">
+        <h1>Liste des disques</h1>
+        <div class="ms-auto"><a href="{{ path('disc_new') }}" class="btn btn-secondary shadow">Ajouter</a></div>
+    </div>
+
+
+    <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 row-cols-xxl-4 g-4">
+
+        {% for disc in discs %}
+
+
+        <div class="col">
+            <div class="card">
+                <img src="{{ asset('img/'~disc.discPicture ) }}" alt="image"></p>
+                <div class="card-body">
+                    <h3 class="mb-3">{{ disc.discTitle }}</h3>
+                    <p><strong> Year : </strong> {{ disc.discYear }}</p>
+                    <p><strong>Label : </strong> {{ disc.discLabel }}</p>
+                    <p><strong>Genre :</strong>  {{ disc.discGenre }}</p>
+                    <p><strong>Price :</strong> {{ disc.discPrice }}</p>
+                    <p><strong>Artist :</strong></p>
+                    <p><a href="{{ path('disc_show', {'discId': disc.discId}) }}" class="btn btn-outline-danger shadow">détails</a></p>
+                </div>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+{% endblock %}
