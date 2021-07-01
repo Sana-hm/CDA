@@ -64,9 +64,7 @@ var app2 = new Vue({
 
         data: {
 
-            operat: [
-                '+', '-', '=', 'x', '/', '.'
-            ],
+            operator: '',
 
             number1: '',
 
@@ -78,8 +76,25 @@ var app2 = new Vue({
 
             display: 0,
         },
-
+        
         methods: {
+
+            reset: function() {
+
+                this.operator = '';
+                this.number1 = '';
+                this.number2 = '';
+                this.resultat = '0';
+                this.display = '0';
+
+            }
+
+            getOper: function(op) {
+
+                this.operator = op;
+            }
+
+
 
             addNum: function(number) {
 

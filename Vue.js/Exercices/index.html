@@ -55,38 +55,38 @@
                 <div id="calcul" class="col-6 d-flex">
                     <div class="border p-3">
                         <div class="p-1">
-                            <div class="border border-1 p-2 py-3"></div>
+                            <div class="border border-1 p-2 py-3">{{ display }}</div>
                          </div>
                         <div class="p-1 ">
                             <button v-on:click="addNum(1)" class="px-3 py-2 shadow btn btn-light ">1</button>
                             <button v-on:click="addNum(2)" class="px-3 py-2 shadow btn btn-light">2</button>
                             <button v-on:click="addNum(3)" class="px-3 py-2 shadow btn btn-light">3</button>
-                            <button  class="px-3 py-2 shadow  btn btn-danger"><i class="fas fa-times"></i></button>
+                            <button v-on:click="addNum('*')" class="px-3 py-2 shadow  btn btn-danger"><i class="fas fa-times"></i></button>
                         </div>
          
                          <div class="p-1">
                              <button v-on:click="addNum(4)"  class="px-3 py-2 shadow btn btn-light">4</button>
                              <button v-on:click="addNum(5)" class="px-3 py-2 shadow btn btn-light">5</button>
                              <button v-on:click="addNum(6)" class="px-3 py-2 shadow btn btn-light">6</button>
-                             <button   class="px-3 py-2 shadow btn btn-danger"> <i class="fas fa-minus"></i> </button>
+                             <button  v-on:click="addNum('-')" class="px-3 py-2 shadow btn btn-danger"> <i class="fas fa-minus"></i> </button>
                          </div>
          
                          <div class="p-1">
                              <button v-on:click="addNum(7)" class="px-3 py-2 shadow btn btn-light">7</button>
                              <button v-on:click="addNum(8)" class="px-3 py-2 shadow btn btn-light">8</button>
                              <button v-on:click="addNum(9)" class="px-3 py-2 shadow btn btn-light">9</button>
-                             <button  class="px-3 py-2 shadow btn btn-danger "><i class="fas fa-plus"></i></button>
+                             <button v-on:click="addNum('+')" class="px-3 py-2 shadow btn btn-danger "><i class="fas fa-plus"></i></button>
                          </div>
          
                          <div class="p-1">
                              <button  v-on:click="addNum(0)" class="px-3 py-2 shadow btn btn-light">0</button>
-                             <button v-on:click="addNum(.)" class="px-3 py-2 shadow btn btn-light"> .  </button>
-                             <button v-on:click="addNum(%)" class="px-3 py-2 shadow btn btn-light">%</button>
-                             <button  class="px-3 py-2  shadow btn btn-danger"><i class="fas fa-divide"></i></button>
+                             <button v-on:click="addNum('.')" class="px-3 py-2 shadow btn btn-light"> .  </button>
+                             <button v-on:click="addNum('%')" class="px-3 py-2 shadow btn btn-light">%</button>
+                             <button v-on:click="addNum('/')" class="px-3 py-2  shadow btn btn-danger"><i class="fas fa-divide"></i></button>
                          </div> 
                          <div class="p-1">
-                            <button class="py-2 px-5 shadow btn btn-danger"><i class="fa fa-equals"></i></button>
-                            <button value="" class="py-2 px-4 shadow  btn btn-danger"> <i class="fa fa-backspace"></i></button>
+                            <button  class="py-2 px-5 shadow btn btn-danger"><i class="fa fa-equals"></i></button>
+                            <button  class="py-2 px-4 shadow  btn btn-danger"> <i class="fa fa-backspace"></i></button>
                          </div>      
                     </div>    
                 </div>
