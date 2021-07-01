@@ -12,6 +12,7 @@ var app1 = new Vue({
         sum:''
     }
 });
+// End Additionneur
 
 // Nombre Magique
 let magic = parseInt(Math.random()*100);
@@ -53,5 +54,59 @@ var app2 = new Vue({
         }
 
     }
-
 });
+    //End Nombre Magique
+
+    // Calculatrice
+    var app3 = new Vue({
+
+        el: '#calcul',
+
+        data: {
+
+            operat: [
+                '+', '-', '='
+            ],
+
+            numbers: [
+                1, 2, 3,
+                4, 5, 6,
+                7, 8, 9
+            ],
+
+            operator: '',
+
+            resultat: 0,
+
+            display: 0,
+        },
+
+        methods: {
+
+            addNum: function(number) {
+
+                this.display = number;
+
+                switch (this.operator) {
+                    case '+':
+                        this.resultat += number;
+                        break;
+                    case '-':
+                        this.resultat -= number;
+                        break;
+                    case '=':
+                        this.display = this.resultat;
+                        break;
+
+                    default:
+                        this.resultat = number;
+                        break;
+                 }
+            },
+        }
+
+
+    });
+   //End Calculatrice
+
+
