@@ -65,14 +65,12 @@ var app2 = new Vue({
         data: {
 
             operat: [
-                '+', '-', '='
+                '+', '-', '=', 'x', '/', '.'
             ],
 
-            numbers: [
-                1, 2, 3,
-                4, 5, 6,
-                7, 8, 9
-            ],
+            number1: '',
+
+            number2: '',
 
             operator: '',
 

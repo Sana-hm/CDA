@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css" integrity="sha512-HK5fgLBL+xu6dm/Ii3z4xhlSUyZgTT9tuc/hSrtw6uzJOvgRr2a9jyxxT1ely+B+xFAmJKVSTbpM/CuL7qxO8w==" crossorigin="anonymous" />
       <!-- Link Bootstrap -->
       <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
       <!-- Link Vue.js  -->
@@ -25,6 +26,7 @@
     </nav><br>
     <!-- End Navbar -->
 
+
         <!-- Exercice Additionneur -->
         <strong>1- Additionneur</strong>
         <hr><br>
@@ -34,6 +36,7 @@
            <strong style="color: red;">{{ num1 + num2 }}</strong>
         </div>
          <!-- End Exercice Additionneur -->
+
 
           <!-- Exercice Nombre Magique -->
           <strong>2- Nombre magique - Devinez une valeur entre 0 et 100</strong><hr>
@@ -45,40 +48,52 @@
             </div>
             <!-- End Exercice Nombre Magique -->
 
+
             <!-- Exercice Calculatrice -->
-            <strong>3- Calculatrice</strong><hr>
-            <div id="calcul">
-               <div class="p-1 ">
-                   <input type="button" value="1" class="px-3 py-2 shadow btn btn-light">
-                   <input type="button" value="2" class="px-3 py-2 shadow btn btn-light">
-                   <input type="button" value="3" class="px-3 py-2 shadow btn btn-light">
-               </div>
-                <div class="p-1">
-                    <input type="button" value="4" class="px-3 py-2 shadow btn btn-light">
-                    <input type="button" value="5" class="px-3 py-2 shadow btn btn-light">
-                    <input type="button" value="6" class="px-3 py-2 shadow btn btn-light">
-                    
-
+            <strong>3- Calculatrice  <i class="fas fa-calculator"></i></strong><hr>
+            <div class="row">
+                <div id="calcul" class="col-6 d-flex">
+                    <div class="border p-3">
+                        <div class="p-1">
+                            <div class="border border-1 p-2 py-3"></div>
+                         </div>
+                        <div class="p-1 ">
+                            <button v-on:click="addNum(1)" class="px-3 py-2 shadow btn btn-light ">1</button>
+                            <button v-on:click="addNum(2)" class="px-3 py-2 shadow btn btn-light">2</button>
+                            <button v-on:click="addNum(3)" class="px-3 py-2 shadow btn btn-light">3</button>
+                            <button  class="px-3 py-2 shadow  btn btn-danger"><i class="fas fa-times"></i></button>
+                        </div>
+         
+                         <div class="p-1">
+                             <button v-on:click="addNum(4)"  class="px-3 py-2 shadow btn btn-light">4</button>
+                             <button v-on:click="addNum(5)" class="px-3 py-2 shadow btn btn-light">5</button>
+                             <button v-on:click="addNum(6)" class="px-3 py-2 shadow btn btn-light">6</button>
+                             <button   class="px-3 py-2 shadow btn btn-danger"> <i class="fas fa-minus"></i> </button>
+                         </div>
+         
+                         <div class="p-1">
+                             <button v-on:click="addNum(7)" class="px-3 py-2 shadow btn btn-light">7</button>
+                             <button v-on:click="addNum(8)" class="px-3 py-2 shadow btn btn-light">8</button>
+                             <button v-on:click="addNum(9)" class="px-3 py-2 shadow btn btn-light">9</button>
+                             <button  class="px-3 py-2 shadow btn btn-danger "><i class="fas fa-plus"></i></button>
+                         </div>
+         
+                         <div class="p-1">
+                             <button  v-on:click="addNum(0)" class="px-3 py-2 shadow btn btn-light">0</button>
+                             <button v-on:click="addNum(.)" class="px-3 py-2 shadow btn btn-light"> .  </button>
+                             <button v-on:click="addNum(%)" class="px-3 py-2 shadow btn btn-light">%</button>
+                             <button  class="px-3 py-2  shadow btn btn-danger"><i class="fas fa-divide"></i></button>
+                         </div> 
+                         <div class="p-1">
+                            <button class="py-2 px-5 shadow btn btn-danger"><i class="fa fa-equals"></i></button>
+                            <button value="" class="py-2 px-4 shadow  btn btn-danger"> <i class="fa fa-backspace"></i></button>
+                         </div>      
+                    </div>    
                 </div>
-                <div class="p-1">
-                    <input type="button" value="7" class="px-3 py-2 shadow btn btn-light">
-                    <input type="button" value="8" class="px-3 py-2 shadow btn btn-light">
-                    <input type="button" value="9" class="px-3 py-2 shadow btn btn-light">
-
-                </div>
-                <div class="p-1">
-                    <input type="button" value="+" class="px-3 py-2 shadow btn btn-light">
-                    <input type="button" value="-" class="px-3 py-2 shadow btn btn-light">
-                    <input type="button" value="=" class="px-3 py-2 shadow btn btn-light">
-                </div>
-                    
-                     
-                    
-            
-            </div>    
+            </div>
             <!-- End Exercice Calculatrice -->
 
-    </div>
+            </div>
     <!-- Link main.js -->
 <script src="main.js"></script> 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
