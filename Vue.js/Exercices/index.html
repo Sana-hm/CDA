@@ -10,6 +10,7 @@
       <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
       <!-- Link Vue.js  -->
       <script src="vue.js"></script>
+      <link rel="stylesheet" href="style.css">
   
 </head>
 <body>
@@ -50,49 +51,60 @@
 
 
             <!-- Exercice Calculatrice -->
-            <strong>3- Calculatrice  <i class="fas fa-calculator"></i></strong><hr>
+            <strong>3- Calculatrice</strong> <i class="fas fa-calculator"></i><hr>
             <div class="row">
-                <div id="calcul" class="col-6 d-flex">
+                <div id="calcul" class="col-sm-8 col-lg-6 d-flex">
                     <div class="border p-3">
                         <div class="p-1">
-                            <div class="border border-1 p-2 py-3">{{ display }}</div>
+                            <div class="border border-1 p-2 py-2">{{ display }}</div>
                          </div>
                         <div class="p-1 ">
                             <button v-on:click="addNum(1)" class="px-3 py-2 shadow btn btn-light ">1</button>
                             <button v-on:click="addNum(2)" class="px-3 py-2 shadow btn btn-light">2</button>
                             <button v-on:click="addNum(3)" class="px-3 py-2 shadow btn btn-light">3</button>
-                            <button v-on:click="addNum('*')" class="px-3 py-2 shadow  btn btn-danger"><i class="fas fa-times"></i></button>
+                            <button v-on:click="setOperator('*')" class="px-3 py-2 shadow  btn btn-danger"><i class="fas fa-times"></i></button>
                         </div>
          
                          <div class="p-1">
                              <button v-on:click="addNum(4)"  class="px-3 py-2 shadow btn btn-light">4</button>
                              <button v-on:click="addNum(5)" class="px-3 py-2 shadow btn btn-light">5</button>
                              <button v-on:click="addNum(6)" class="px-3 py-2 shadow btn btn-light">6</button>
-                             <button  v-on:click="addNum('-')" class="px-3 py-2 shadow btn btn-danger"> <i class="fas fa-minus"></i> </button>
+                             <button  v-on:click="setOperator('-')" class="px-3 py-2 shadow btn btn-danger"> <i class="fas fa-minus"></i> </button>
                          </div>
          
                          <div class="p-1">
                              <button v-on:click="addNum(7)" class="px-3 py-2 shadow btn btn-light">7</button>
                              <button v-on:click="addNum(8)" class="px-3 py-2 shadow btn btn-light">8</button>
                              <button v-on:click="addNum(9)" class="px-3 py-2 shadow btn btn-light">9</button>
-                             <button v-on:click="addNum('+')" class="px-3 py-2 shadow btn btn-danger "><i class="fas fa-plus"></i></button>
+                             <button v-on:click="setOperator('+')" class="px-3 py-2 shadow btn btn-danger "><i class="fas fa-plus"></i></button>
                          </div>
          
                          <div class="p-1">
                              <button  v-on:click="addNum(0)" class="px-3 py-2 shadow btn btn-light">0</button>
                              <button v-on:click="addNum('.')" class="px-3 py-2 shadow btn btn-light"> .  </button>
-                             <button v-on:click="addNum('%')" class="px-3 py-2 shadow btn btn-light">%</button>
-                             <button v-on:click="addNum('/')" class="px-3 py-2  shadow btn btn-danger"><i class="fas fa-divide"></i></button>
+                             <button v-on:click="setOperator('%')" class="px-3 py-2 shadow btn btn-light">%</button>
+                             <button v-on:click="setOperator('/')" class="px-3 py-2  shadow btn btn-danger"><i class="fas fa-divide"></i></button>
                          </div> 
                          <div class="p-1">
-                            <button  class="py-2 px-5 shadow btn btn-danger"><i class="fa fa-equals"></i></button>
-                            <button  class="py-2 px-4 shadow  btn btn-danger"> <i class="fa fa-backspace"></i></button>
+                            <button  v-on:click="egal" class="py-2 px-5 shadow btn btn-danger"><i class="fa fa-equals"></i></button>
+                            <button  v-on:click="reset" class="py-2 px-4 shadow  btn btn-danger"> <i class="fa fa-backspace"></i></button>
                          </div>      
                     </div>    
                 </div>
-            </div>
+            </div><br><br>
             <!-- End Exercice Calculatrice -->
 
+            <!-- Exercice Interface -->
+            <div id="color">
+               <div class="mt-2">
+                  <strong>4- Interface</strong><hr>
+               </div>
+                  <p>Cliquez sur le bouton pour changer la couleur de la lune</p>
+                  <div v-if='' class="space-invader mb-5"></div>
+                  <button type="button" class="btn btn-outline-dark mb-3 rounded-pill">Dark</button>
+                  <div></div>
+            </div>
+            <!-- End Exercice Interface -->
             </div>
     <!-- Link main.js -->
 <script src="main.js"></script> 

@@ -55,7 +55,7 @@ var app2 = new Vue({
 
     }
 });
-    //End Nombre Magique
+//End Nombre Magique
 
     // Calculatrice
     var app3 = new Vue({
@@ -74,52 +74,86 @@ var app2 = new Vue({
 
             resultat: 0,
 
-            display: 0,
+            display: 0
         },
         
         methods: {
 
+            egal: function() {
+
+                switch (this.operator) {
+                    case '+':
+                        this.resultat = this.number1 + this.number2;
+                        this.display = this.resultat;
+                        break;
+
+                    case '-':
+                        this.resultat = this.number1 - this.number2;
+                        this.display = this.resultat;
+                        break;
+
+                    case '*':
+                        this.resultat = this.number1 * this.number2;
+                        this.display = this.resultat;
+                        break;
+
+                    case '/':
+                        this.resultat = this.number1 / this.number2;
+                        this.display = this.resultat;
+                        break;
+
+                    default:
+                        break;
+                 }
+            },
+
+
             reset: function() {
 
-                this.operator = '';
+                this.operator = null;
                 this.number1 = '';
                 this.number2 = '';
                 this.resultat = '0';
                 this.display = '0';
 
-            }
+            },
 
-            getOper: function(op) {
+            setOperator: function(op) {
 
                 this.operator = op;
-            }
-
-
+                this.display = this.operator;
+            },
 
             addNum: function(number) {
 
-                this.display = number;
+                if (!this.operator) {
 
-                switch (this.operator) {
-                    case '+':
-                        this.resultat += number;
-                        break;
-                    case '-':
-                        this.resultat -= number;
-                        break;
-                    case '=':
-                        this.display = this.resultat;
-                        break;
+                    this.number1 += number; 
 
-                    default:
-                        this.resultat = number;
-                        break;
-                 }
-            },
+                    this.display = this.number1;
+                    
+                }else {
+
+                    this.number2 += number;
+
+                    this.display = this.number2;
+                }              
+            }
         }
-
-
     });
    //End Calculatrice
+
+
+   //Interface
+    var app4 = new Vue({
+
+        el: '#color',
+
+        data: {
+            avtiveColor: 'black',
+        }
+    });
+
+   //End Interface
 
 
