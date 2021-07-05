@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="demo_js">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/CheckFormulaire javascript/demo_js.zip!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>
