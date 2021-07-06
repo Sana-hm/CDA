@@ -7,7 +7,7 @@ public class Parite {
 
         //exo1
 
-        System.out.println("Ecrivez un numéro :");
+        System.out.println("Ecrivez un nombre :");
 
         Scanner sc = new Scanner(System.in);
 

@@ -6,14 +6,14 @@ public class Calculette {
 
     public static void main (String args[]) {
         //exo3
-        System.out.println("Entrez le premier numéro :");
+        System.out.println("Entrez le premier nombre :");
 
         Scanner sc = new Scanner(System.in);
 
         float number1 = sc.nextInt();
 
 
-        System.out.println("Entrez le dauxième numéro :");
+        System.out.println("Entrez le dauxième nombre :");
 
         float number2 = sc.nextInt();
 
