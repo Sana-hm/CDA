@@ -5,7 +5,8 @@ import java.util.Scanner;
 public class Entiers {
 
     public static void main (String args[]) {
-        //exo1
+        //exo1 - Les entiers inférieurs à N
+
         System.out.println("Entrez un entier : ");
 
         Scanner sc = new Scanner(System.in);
