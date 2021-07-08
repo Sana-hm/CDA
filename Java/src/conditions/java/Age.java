@@ -5,7 +5,7 @@ import java.util.Scanner;
 
 public class Age {
 
-    public static void main (String args[]) {
+    public static void age () {
         //exo2
 
         System.out.println("Entrez votre l’année de naissance : ");

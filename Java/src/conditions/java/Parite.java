@@ -3,7 +3,7 @@ package conditions.java;
 import java.util.Scanner;
 
 public class Parite {
-    public static void main (String args[]) {
+    public static void pair () {
 
         //exo1
 

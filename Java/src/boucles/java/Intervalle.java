@@ -4,7 +4,7 @@ import java.util.Scanner;
 
 public class Intervalle {
 
-    public static void main (String args[]) {
+    public static void somme () {
         //exo3 - Somme d'un intervalle
 
         System.out.println("Entrez le premier nombre : ");

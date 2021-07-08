@@ -5,7 +5,7 @@ import java.util.Scanner;
 public class Nomvoyelles {
     //exo4 - Nombre de voyelles
 
-    public static void main (String args[]) {
+    public static void nomvoy () {
 
         System.out.println("Veuillez entrer un mot : ");
 

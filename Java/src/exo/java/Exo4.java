@@ -3,7 +3,7 @@ package exo.java;
 import java.util.Scanner;
 
 public class Exo4 {
-    public static void main (String args[]) {
+    public static void moyenne () {
 
         //exo4
         double surveille;

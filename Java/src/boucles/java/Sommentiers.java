@@ -4,7 +4,7 @@ import java.util.Scanner;
 
 public class Sommentiers {
 
-    public static void main (String args[]) {
+    public static void sommmme () {
         //exo2 - La somme des entiers inférieurs à N
 
         System.out.println("Entrez un nombre :");

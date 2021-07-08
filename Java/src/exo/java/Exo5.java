@@ -3,7 +3,7 @@ package exo.java;
 import java.util.Scanner;
 
 public class Exo5 {
-    public static void main (String args[]) {
+    public static void conversion () {
 
         int hh, mm , ss;
 

@@ -4,7 +4,7 @@ import java.util.Scanner;
 
 public class Calculette {
 
-    public static void main (String args[]) {
+    public static void calculette () {
         //exo3
         System.out.println("Entrez le premier nombre :");
 

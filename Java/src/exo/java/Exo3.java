@@ -3,7 +3,7 @@ package exo.java;
 import java.util.Scanner;
 
 public class Exo3 {
-    public static void main (String args[]) {
+    public static void conversion() {
 
         //exo3
         System.out.println("Entrez une températeur en Fahrenheit :");

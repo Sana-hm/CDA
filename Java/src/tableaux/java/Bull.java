@@ -3,9 +3,9 @@ package tableaux.java;
 import java.util.Arrays;
 import java.util.Scanner;
 
-public class Exo3 {
+public class Bull {
 
-    public static void main(String args[]) {
+    public static void trier() {
         //exo3 - Tri d’un tableau
        //Ecrire un programme qui permet de trier un tableau en utilisant le tri à bulles.
 

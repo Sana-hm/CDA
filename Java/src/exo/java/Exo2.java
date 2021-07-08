@@ -3,7 +3,7 @@ package exo.java;
 import java.util.Scanner;
 
 public class Exo2 {
-    public static void main (String args[]) {
+    public static void diviseur () {
 
         //exo2
         System.out.println("entrez le premier numéro : ");

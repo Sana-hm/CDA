@@ -4,7 +4,7 @@ import java.util.Scanner;
 
 public class Triangle {
 
-    public static void main(String args[]) {
+    public static void triangle() {
         //exo5 - dessin d'un triangle
 
         System.out.println("Combien de lignes? ");
