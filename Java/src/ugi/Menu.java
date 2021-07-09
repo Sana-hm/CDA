@@ -54,13 +54,42 @@ public class Menu {
                     double resul = Introduction.calcul( op, num1, num2 );
                     System.out.println("Le resultat est = " + resul);
                 }
+
                 case 20 ->{
-                    Concat.concat();
+                    System.out.println("Veuillez entrer la première chaine de caractères: ");
+                    String firstStr = sc.next();
+
+                    System.out.println("Veuillez entrer la seconde chaine de caractères: ");
+                    String secondStr = sc.next();
+
+                    String resul = Concat.concat(firstStr,secondStr);
+                    System.out.println("Le resultat est = " + resul);
                 }
+
+                case 21 -> {
+
+                    System.out.println("Veuillez entrer une phrase: ");
+                    sc.nextLine();
+                    String words = sc.nextLine();
+
+                    int resul = Carateres.compteMot(words);
+                    System.out.println("Le resultat est = " + resul);
+                }
+
+                case 22 -> {
+
+                    System.out.println("Combien d'itérations voulez vous: ");
+                    int  fibon = sc.nextInt();
+
+                    int resul = Fibonacci.fibonacci(fibon);
+                    System.out.println("Le resultat est = " + resul);
+                }
+
+
+                
 
                 default -> System.out.println("Les exercice n'est pas trouver! ");
             }
-                sc.nextLine();
                 System.out.println("Voulez-vous contiuner? (y/n)");
                 char chr = sc.next().charAt(0);
                 switch (chr){
