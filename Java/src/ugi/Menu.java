@@ -5,6 +5,7 @@ import exo.java.*;
 import conditions.java.*;
 import boucles.java.*;
 import tableaux.java.*;
+import function.java.*;
 
 import java.util.Scanner;
 
@@ -12,7 +13,7 @@ public class Menu {
 
     public void continuer(){
         System.out.println("===========================================");
-        System.out.println("|               Bienvune !                |");
+        System.out.println("|               Bienvune ^.^              |");
         System.out.println("===========================================");
 
         boolean repet = false;
@@ -21,7 +22,7 @@ public class Menu {
             System.out.println("Entrez le numéro de l'exercice: ");
             Scanner sc = new Scanner(System.in);
             int numExo = sc.nextInt();
-            switch (numExo){
+            switch (numExo) {
                 case 1 -> Exo1.add();
                 case 2 -> Exo2.diviseur();
                 case 3 -> Exo3.conversion();
@@ -40,8 +41,44 @@ public class Menu {
                 case 16 -> Tailles.taille();
                 case 17 -> Prenom.prenom();
                 case 18 -> Bull.trier();
+                case 19 ->{
+                     System.out.println("Entrez le premier nombre : ");
+                      double num1 = sc.nextDouble();
 
+                    System.out.println("Entrez le dauxième nombre :");
+                      double  num2 = sc.nextDouble();
+
+                    System.out.println("Entrez un opérateur : ");
+                      char op = sc.next().charAt(0);
+
+                    double resul = Introduction.calcul( op, num1, num2 );
+                    System.out.println("Le resultat est = " + resul);
+                }
+                case 20 ->{
+                    Concat.concat();
+                }
+
+                default -> System.out.println("Les exercice n'est pas trouver! ");
+            }
+                sc.nextLine();
+                System.out.println("Voulez-vous contiuner? (y/n)");
+                char chr = sc.next().charAt(0);
+                switch (chr){
+                    case 'y':
+                        repet = true;
+                        break;
+                    case 'n':
+                        repet = false;
+                        break;
+
+                    default:
+                        System.out.println("Votre choix n'est pas reconnu, çe sera non!!");
+                }
         }
         while (repet);
+        System.out.println("===========================================");
+        System.out.println("|               Au revoir *.*             |");
+        System.out.println("===========================================");
     }
 }
+
