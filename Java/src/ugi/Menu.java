@@ -85,8 +85,42 @@ public class Menu {
                     System.out.println("Le resultat est = " + resul);
                 }
 
+                case 23 -> {
 
-                
+                    System.out.println("Veuillez entrer le nombre que vous voulez multiplier : ");
+                    int num = sc.nextInt();
+
+                    Multiplication.multiplication(num);
+                }
+
+                case 24 -> {
+
+                    sc.nextLine();
+
+                    System.out.println("Veuillez entrer une phrase : ");
+                     String phr = sc.nextLine();
+
+                    System.out.println("Veuillez entrer une lettre : ");
+                    String lett = sc.next();
+
+                    int resul = Lettres.countLettres(phr,lett);
+                    System.out.printf("Il y a %d lettre(s) dans la phrase.", resul);
+                    System.out.println();
+
+                }
+
+                case 25 -> {
+
+                    String str1, resultat;
+
+                    str1 = "robert;dupont;amiens;80000";
+
+                    resultat = Token.strtok (str1, ";", 3);
+
+                    System.out.println(resultat);
+                }
+
+
 
                 default -> System.out.println("Les exercice n'est pas trouver! ");
             }
