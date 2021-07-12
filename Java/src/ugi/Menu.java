@@ -6,6 +6,7 @@ import conditions.java.*;
 import boucles.java.*;
 import tableaux.java.*;
 import function.java.*;
+import objets.java.*;
 
 import java.util.Scanner;
 
@@ -118,6 +119,35 @@ public class Menu {
                     resultat = Token.strtok (str1, ";", 3);
 
                     System.out.println(resultat);
+                }
+
+                //objets.java
+                case 26 ->{
+
+                    Cercle cercle1 = new Cercle(10);
+
+                    double surface1 = cercle1.calculSurface();
+
+                    System.out.println("La surface = " + surface1);
+                    double circonference1 = cercle1.calculCirconference();
+                    System.out.println("La circonference  = " + circonference1);
+
+
+                    Cercle cercle2 = new Cercle(45);
+                    double surface2 = cercle2.calculSurface();
+
+                    System.out.println("La surface = " + surface2);
+                    double circonference2 = cercle2.calculCirconference();
+                    System.out.println("La circonference  = " + circonference2);
+
+                }
+
+                case 27 ->{
+
+                    TriNombre tri = new TriNombre();
+                    tri.saisie();
+                    tri.tri();
+                    tri.affiche();
                 }
 
 
