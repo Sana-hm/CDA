@@ -15,26 +15,20 @@ public class TransCoder {
     public TransCoder(String str) {
 
         String keys = ManaBox.decrypt(str);
-        StringBuilder values = new StringBuilder();
 
         char ch1 ='A';
         char ch2 = 'A';
 
-        for (int i = 0; i < keys.length() ; i++) {
+        for (int i = 0; i < keys.length()  ; i++) {
 
-            values.append(ch1);
-            values.append(ch2);
-            ch2++;
-            if (ch2 > 'Z') {
-
+            encode.put(keys.charAt(i), ""+ch1+ch2);
+            decode.put( ""+ch1+ch2 ,keys.charAt(i));
+            if (ch2 != 'Z') {
+                ch2++;
+            }else {
                 ch1++;
                 ch2 = 'A';
             }
-        }
-        for (int i = 0; i < keys.length()  ; i++) {
-
-            encode.put(keys.charAt(i), values.substring((i * 2), (i * 2 )+ 2 ));
-            decode.put( values.substring((i * 2), (i * 2 )+ 2 ),keys.charAt(i));
         }
     }
 
