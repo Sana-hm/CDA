@@ -2,15 +2,12 @@ package tools.java;
 
 import org.apache.commons.lang3.StringUtils;
 import org.germain.tool.ManaBox;
-
-import java.util.ArrayList;
 import java.util.HashMap;
-import java.util.List;
 
 public class TransCoder {
 
-    private HashMap<Character,String> encode = new HashMap<>();
-    private  HashMap<String,Character> decode = new HashMap<>();
+    private final HashMap<Character,String> encode = new HashMap<>();
+    private final HashMap<String,Character> decode = new HashMap<>();
 
     public TransCoder(String str) {
 
@@ -40,28 +37,28 @@ public class TransCoder {
         return decode;
     }
 
-    public StringBuilder encode (String str){
+    public String encode (String str){
 
-        StringBuilder crypt = new StringBuilder();
+        String crypt = "";
         str = StringUtils.stripAccents(str);
 
         for (int i = 0; i < str.length() ; i++) {
-            crypt.append(encode.get(str.charAt(i)));
+            crypt = crypt + (encode.get(str.charAt(i)));
         }
         return crypt;
     }
 
-    public StringBuilder decode (String strCode){
+    public String decode (String strCode){
 
         String[] strArr = new String[strCode.length() / 2];
-        StringBuilder decrypt = new StringBuilder();
+        String decrypt = "";
 
         for (int i = 0; i < strArr.length; i++) {
             strArr[i] = strCode.substring((i * 2 ),(i * 2 ) +2);
         }
 
         for (String s:strArr) {
-            decrypt.append(decode.get(s));
+            decrypt = decrypt + (decode.get(s));
         }
         return decrypt;
     }
