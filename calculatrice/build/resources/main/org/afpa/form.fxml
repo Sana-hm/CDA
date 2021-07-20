@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<VBox xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.afpa.gui.FormController">
+   <children>
+   
+             <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="403.0" prefWidth="312.0">
+            <children>
+               <Button fx:id="un" layoutX="26.0" layoutY="108.0" mnemonicParsing="false" onAction="#getButton" prefHeight="44.0" prefWidth="52.0" text="1" />
+               <Button fx:id="deux" layoutX="94.0" layoutY="108.0" mnemonicParsing="false" onAction="#getButton" prefHeight="44.0" prefWidth="52.0" text="2" />
+               <Button fx:id="trois" layoutX="168.0" layoutY="108.0" mnemonicParsing="false" onAction="#getButton" prefHeight="44.0" prefWidth="52.0" text="3" />
+               <Button fx:id="addition" layoutX="234.0" layoutY="108.0" mnemonicParsing="false" onAction="#getButton" opacity="0.67" prefHeight="44.0" prefWidth="52.0" style="-fx-background-color: red;" text="+" textFill="#f5f4f4">
+               <font>
+                  <Font name="System Bold Italic" size="12.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+               <Button fx:id="quatre" layoutX="26.0" layoutY="168.0" mnemonicParsing="false" onAction="#getButton" prefHeight="44.0" prefWidth="52.0" text="4" />
+               <Button fx:id="sept" layoutX="26.0" layoutY="227.0" mnemonicParsing="false" onAction="#getButton" prefHeight="44.0" prefWidth="52.0" text="7" />
+               <Button layoutX="26.0" layoutY="284.0" mnemonicParsing="false" onAction="#getButton" prefHeight="44.0" prefWidth="52.0" text="(" />
+               <Button fx:id="cinq" layoutX="94.0" layoutY="168.0" mnemonicParsing="false" onAction="#getButton" prefHeight="44.0" prefWidth="52.0" text="5" />
+               <Button fx:id="huit" layoutX="94.0" layoutY="227.0" mnemonicParsing="false" onAction="#getButton" prefHeight="44.0" prefWidth="52.0" text="8" />
+               <Button fx:id="six" layoutX="168.0" layoutY="168.0" mnemonicParsing="false" onAction="#getButton" prefHeight="44.0" prefWidth="52.0" text="6" />
+               <Button fx:id="soustraction" layoutX="234.0" layoutY="168.0" mnemonicParsing="false" onAction="#getButton" opacity="0.67" prefHeight="44.0" prefWidth="52.0" style="-fx-background-color: red;" text="-" textFill="WHITE">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+               <Button fx:id="neuf" layoutX="168.0" layoutY="228.0" mnemonicParsing="false" onAction="#getButton" prefHeight="44.0" prefWidth="52.0" text="9" />
+               <Button fx:id="multiplication" layoutX="234.0" layoutY="228.0" mnemonicParsing="false" onAction="#getButton" opacity="0.67" prefHeight="44.0" prefWidth="52.0" style="-fx-background-color: red;" text="*" textFill="#fcfafa">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+               <Button layoutX="94.0" layoutY="284.0" mnemonicParsing="false" onAction="#getButton" prefHeight="44.0" prefWidth="52.0" text=")" />
+               <Button fx:id="effacer" layoutX="168.0" layoutY="284.0" mnemonicParsing="false" onAction="#getButton" prefHeight="44.0" prefWidth="52.0" text="C" />
+               <Button fx:id="division" layoutX="234.0" layoutY="284.0" mnemonicParsing="false" onAction="#getButton" opacity="0.67" prefHeight="44.0" prefWidth="52.0" style="-fx-background-color: red;" text="/" textFill="WHITE">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+               <Button fx:id="egal" layoutX="168.0" layoutY="338.0" mnemonicParsing="false" onAction="#getButton" opacity="0.67" prefHeight="44.0" prefWidth="116.0" style="-fx-background-color: red;" text="=" textFill="WHITE">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+               <Button fx:id="zero" layoutX="26.0" layoutY="338.0" mnemonicParsing="false" onAction="#getButton" prefHeight="44.0" prefWidth="52.0" text="0" />
+               <Button layoutX="94.0" layoutY="338.0" mnemonicParsing="false" onAction="#getButton" prefHeight="44.0" prefWidth="52.0" text="." />
+            <TextArea fx:id="display" editable="false" layoutX="24.0" layoutY="31.0" prefHeight="58.0" prefWidth="265.0" />
+            </children>
+         </AnchorPane>
+   </children>
+</VBox>
