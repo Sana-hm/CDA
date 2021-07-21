@@ -5,7 +5,6 @@ import javafx.event.ActionEvent;
 import javafx.scene.control.Button;
 import javafx.scene.control.TextArea;
 
-import java.math.BigDecimal;
 
 public class FormController {
 
@@ -26,18 +25,13 @@ public class FormController {
     public Button egal;
     public TextArea display;
     public Button effacer;
-    public Integer operand1;
-    public Integer operand2;
-    public Integer result;
+    public double operand1;
+    public double operand2;
+    public double result;
     public String operator;
-    public boolean hasOperator;
-
-
-
+    public boolean b;
 
     public void getButton(ActionEvent actionEvent) {
-
-        hasOperator = false;
 
 
         Button btn = (Button) actionEvent.getSource();
@@ -46,34 +40,51 @@ public class FormController {
 
         if (buttonText.equals("C")) {
             display.clear();
+            operator = null;
+            operand1 = 0;
+            operand2 = 0;
+            result = 0;
         }
         if (buttonText.matches("[0-9]")) {
+            if(b){
+                display.clear();
+                b=false;
+            }
+
             display.appendText(buttonText);
+            if(operator == null){
+                operand1 = Integer.parseInt(display.getText());
+            }else {
+                operand2 = Integer.parseInt(display.getText());
+            }
+
         }
-        if (buttonText.matches("[＋－×÷]")) {
-            operand1 = Integer.parseInt(display.getText());
-            hasOperator =true;
+        if (buttonText.equals("+") || buttonText.equals("-") || buttonText.equals("*") || buttonText.equals("/")) {
+
+            operator = buttonText;
+            display.clear();
 
         }
         if (buttonText.equals("=")) {
-            operand2 = Integer.parseInt(display.getText());
+
+            System.out.println(operator);
+            System.out.println(operand1);
+            System.out.println(operand2);
+
             result = calculate(operator, operand1, operand2);
             display.setText(String.valueOf(result));
+            b = true;
+
         }
     }
-    private static Integer  calculate(String operator, Integer operand1, Integer operand2) {
-        switch (operator) {
-            case "＋":
-                return operand1 + operand2;
-            case "－" :
-                return operand1 - operand2;
-            case "×":
-                return operand1 * operand2;
-            case "÷":
-                return operand1 / operand2;
-            default:
-        }
-        return 0;
+    private static double calculate(String operator, double operand1, double operand2) {
+        return switch (operator) {
+            case "+" -> operand1 + operand2;
+            case "－" -> operand1 - operand2;
+            case "*" -> operand1 * operand2;
+            case "/" -> operand1 / operand2;
+            default -> 0;
+        };
     }
 
 }
