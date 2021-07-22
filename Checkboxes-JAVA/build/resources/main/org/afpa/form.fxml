@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox prefHeight="518.0" prefWidth="888.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.afpa.gui.FormController">
+   <children>
+       <AnchorPane prefHeight="509.0" prefWidth="888.0">
+          <children>
+              <TextField fx:id="inputText" layoutX="60.0" layoutY="66.0" onKeyTyped="#saisir" prefHeight="38.0" prefWidth="406.0" />
+              <TitledPane fx:id="choix" animated="false" disable="true" layoutX="548.0" layoutY="33.0" text="Choix">
+                 <content>
+                     <AnchorPane blendMode="MULTIPLY" cacheHint="SCALE" minHeight="0.0" minWidth="0.0" prefHeight="130.0" prefWidth="270.0">
+                         <opaqueInsets>
+                             <Insets left="10.0" />
+                         </opaqueInsets>
+                        <children>
+                            <CheckBox fx:id="couleurFond" layoutX="35.0" layoutY="24.0" mnemonicParsing="false" onAction="#activeBox" text="Couleur du fond" />
+                            <CheckBox fx:id="couleurText" layoutX="35.0" layoutY="57.0" mnemonicParsing="false" onAction="#activeBox" text="Couleur du text" />
+                            <CheckBox fx:id="casseCheck" layoutX="35.0" layoutY="91.0" mnemonicParsing="false" onAction="#activeBox" text="Casse" />
+                        </children>
+                     <effect>
+                        <Blend />
+                     </effect>
+                     </AnchorPane>
+                 </content>
+              </TitledPane>
+              <TitledPane fx:id="casse" animated="false" disable="true" layoutX="610.0" layoutY="287.0" text="Casse">
+                 <content>
+                     <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                        <children>
+                            <RadioButton fx:id="minuscule" layoutX="39.0" layoutY="44.0" mnemonicParsing="false" onAction="#changeCasse" selected="true" text="Minuscule">
+                           <toggleGroup>
+                              <ToggleGroup fx:id="cassGroup" />
+                           </toggleGroup>
+                            </RadioButton>
+                            <RadioButton fx:id="majuscule" layoutX="39.0" layoutY="90.0" mnemonicParsing="false" onAction="#changeCasse" text="Majuscule" toggleGroup="$cassGroup" />
+                        </children>
+                     <effect>
+                        <Blend />
+                     </effect>
+                     </AnchorPane>
+                 </content>
+              </TitledPane>
+              <TitledPane fx:id="texte" animated="false" disable="true" layoutX="332.0" layoutY="287.0" text="Texte">
+                 <content>
+                     <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                        <children>
+                            <RadioButton fx:id="RougeTexte" layoutX="35.0" layoutY="30.0" mnemonicParsing="false" onAction="#changer" text="Rouge">
+                           <toggleGroup>
+                              <ToggleGroup fx:id="txtGroup" />
+                           </toggleGroup>
+                            </RadioButton>
+                            <RadioButton fx:id="BlancTexte" layoutX="33.0" layoutY="64.0" mnemonicParsing="false" onAction="#changer" selected="true" text="Blanc" toggleGroup="$txtGroup" />
+                            <RadioButton fx:id="NoirTexte" layoutX="35.0" layoutY="100.0" mnemonicParsing="false" onAction="#changer" text="Noir" toggleGroup="$txtGroup" />
+                        </children>
+                     <effect>
+                        <Blend />
+                     </effect>
+                     </AnchorPane>
+                 </content>
+              </TitledPane>
+              <TitledPane fx:id="fond" animated="false" disable="true" layoutX="40.0" layoutY="287.0" text="Fond">
+                 <content>
+                     <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                        <children>
+                            <RadioButton fx:id="BleuFond" layoutX="28.0" layoutY="110.0" mnemonicParsing="false" onAction="#changer" text="Bleu">
+                           <toggleGroup>
+                              <ToggleGroup fx:id="fondGroup" />
+                           </toggleGroup>
+                            </RadioButton>
+                            <RadioButton fx:id="VertFond" layoutX="28.0" layoutY="73.0" mnemonicParsing="false" onAction="#changer" text="Vert" toggleGroup="$fondGroup" />
+                            <RadioButton fx:id="RougeFond" layoutX="28.0" layoutY="36.0" mnemonicParsing="false" onAction="#changer" selected="true" text="Rouge" toggleGroup="$fondGroup" />
+                        </children>
+                     <effect>
+                        <Blend />
+                     </effect>
+                     </AnchorPane>
+                 </content>
+              </TitledPane>
+              <Label fx:id="label" layoutX="60.0" layoutY="123.0" prefHeight="49.0" prefWidth="406.0" visible="false" />
+          </children>
+       </AnchorPane>
+   </children>
+</VBox>
