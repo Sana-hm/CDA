@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.afpa.gui.Exo3Controller">
+   <children>
+      <Text layoutX="104.0" layoutY="103.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Ajout d'un fournissseur" wrappingWidth="265.853515625">
+         <font>
+            <Font name="Arial Bold" size="20.0" />
+         </font>
+      </Text>
+      <Text layoutX="93.0" layoutY="162.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Nom">
+         <font>
+            <Font size="13.0" />
+         </font>
+      </Text>
+      <Text layoutX="93.0" layoutY="214.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Rue">
+         <font>
+            <Font size="13.0" />
+         </font>
+      </Text>
+      <Text layoutX="78.0" layoutY="268.0" strokeType="OUTSIDE" strokeWidth="0.0" text="CP / Ville">
+         <font>
+            <Font size="13.0" />
+         </font>
+      </Text>
+      <Text layoutX="85.0" layoutY="317.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Contact">
+         <font>
+            <Font size="13.0" />
+         </font>
+      </Text>
+      <TextField fx:id="nom" layoutX="177.0" layoutY="144.0" prefHeight="25.0" prefWidth="221.0" />
+      <TextField fx:id="rue" layoutX="177.0" layoutY="196.0" prefHeight="25.0" prefWidth="221.0" />
+      <TextField fx:id="contact" layoutX="177.0" layoutY="299.0" prefHeight="25.0" prefWidth="221.0" />
+      <TextField fx:id="cp" layoutX="177.0" layoutY="242.0" prefHeight="25.0" prefWidth="67.0" />
+      <TextField fx:id="ville" layoutX="260.0" layoutY="242.0" prefHeight="25.0" prefWidth="139.0" />
+   </children>
+</AnchorPane>

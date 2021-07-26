@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.canvas.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" style="-fx-border-color: gray;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.afpa.gui.Exo1Controller">
+   <children>
+      <Accordion />
+      <TextField fx:id="codeFourni" layoutX="176.0" layoutY="48.0" prefHeight="34.0" prefWidth="203.0" />
+      <Button fx:id="searchBtn" layoutX="398.0" layoutY="48.0" mnemonicParsing="false" onAction="#search" prefHeight="34.0" prefWidth="71.0" style="-fx-background-color: #e84fbe;" text="Recherche" textFill="WHITE">
+         <effect>
+            <DropShadow />
+         </effect></Button>
+      <Text layoutX="71.0" layoutY="69.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Code fournisseur">
+         <font>
+            <Font name="Arial" size="12.0" />
+         </font>
+      </Text>
+      <Pane layoutX="71.0" layoutY="132.0" prefHeight="244.0" prefWidth="413.0" style="-fx-border-color: #b1b1b1;">
+         <children>
+            <TextField fx:id="ville" layoutX="207.0" layoutY="144.0" prefHeight="25.0" prefWidth="138.0" />
+            <TextField fx:id="contact" layoutX="133.0" layoutY="198.0" prefHeight="25.0" prefWidth="214.0" />
+            <TextField fx:id="cp" layoutX="130.0" layoutY="144.0" prefHeight="25.0" prefWidth="65.0" />
+            <TextField fx:id="nom" layoutX="132.0" layoutY="38.0" prefHeight="25.0" prefWidth="214.0" />
+            <TextField fx:id="adres" layoutX="130.0" layoutY="89.0" prefHeight="25.0" prefWidth="214.0" />
+            <Text layoutX="62.0" layoutY="55.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Nom">
+               <font>
+                  <Font name="Arial" size="12.0" />
+               </font>
+            </Text>
+            <Text layoutX="52.0" layoutY="106.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Adresse">
+               <font>
+                  <Font name="Arial" size="12.0" />
+               </font>
+            </Text>
+            <Text layoutX="52.0" layoutY="161.0" strokeType="OUTSIDE" strokeWidth="0.0" text="CP / Ville">
+               <font>
+                  <Font name="Arial" size="12.0" />
+               </font>
+            </Text>
+            <Text layoutX="56.0" layoutY="215.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Contact">
+               <font>
+                  <Font name="Arial" size="12.0" />
+               </font>
+            </Text>
+         </children></Pane>
+      <Text fill="#2c2a2a" fontSmoothingType="LCD" layoutX="84.0" layoutY="129.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Informations fournisseur">
+         <font>
+            <Font name="Arial" size="12.0" />
+         </font>
+      </Text>
+   </children>
+</AnchorPane>
