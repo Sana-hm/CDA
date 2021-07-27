@@ -25,30 +25,35 @@ public class Exo1Controller {
                 String url = "jdbc:mariadb://localhost:3306/papyrus";
                 Connection connection = DriverManager.getConnection(url, "root" , "root");
                 PreparedStatement preparedStatement = connection.prepareStatement("SELECT * FROM fournis WHERE numfou=?");
+
                 preparedStatement.setInt(1,Integer.parseInt(codeFourni.getText()));
                 ResultSet resultSet = preparedStatement.executeQuery();
-                if (!resultSet.next()) {
-                    App.changeFxml("error1");
+
+//                System.out.println(resultSet.next());
+
+                if (resultSet.isBeforeFirst()) {
+                    while(resultSet.next()){
+
+                        nom.setText(resultSet.getString("nomfou"));
+                        adres.setText(resultSet.getString("ruefou"));
+                        cp.setText(resultSet.getString("posfou"));
+                        ville.setText(resultSet.getString("vilfou"));
+                        contact.setText(resultSet.getString("confou"));
+                    }
                 }
-                while (resultSet.next()){
-                    nom.setText(resultSet.getString("nomfou"));
-                    adres.setText(resultSet.getString("ruefou"));
-                    cp.setText(resultSet.getString("posfou"));
-                    ville.setText(resultSet.getString("vilfou"));
-                    contact.setText(resultSet.getString("confou"));
+                else
+                {
+                    App.changeFxml("error");
                 }
 
                 preparedStatement.close();
                 resultSet.close();
                 connection.close();
 
-
-            }catch (Exception e){
+            } catch (Exception e){
                 System.out.println("Error");
                 System.out.println(e.getMessage());
             }
         }
-
-
     }
 }

@@ -7,15 +7,14 @@
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
-
 <AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.afpa.gui.Exo2Controller">
    <children>
       <Text layoutX="106.0" layoutY="101.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Choix du fournissseur ">
          <font>
-            <Font name="Arial" size="12.0" />
+            <Font name="Arial Bold" size="12.0" />
          </font>
       </Text>
-      <ComboBox fx:id="liste" editable="true" layoutX="246.0" layoutY="85.0" prefHeight="25.0" prefWidth="204.0" promptText="Choisissez" />
+      <ComboBox fx:id="liste" editable="true" layoutX="246.0" layoutY="85.0" onAction="#ChoixFou" prefHeight="25.0" prefWidth="204.0" promptText="Choisissez" />
       <TextArea fx:id="textArea" layoutX="106.0" layoutY="141.0" prefHeight="200.0" prefWidth="360.0" />
    </children>
 </AnchorPane>
