@@ -1,54 +1,100 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.scene.effect.*?>
-<?import javafx.scene.text.*?>
-<?import java.lang.*?>
-<?import java.util.*?>
-<?import javafx.scene.*?>
 <?import javafx.scene.control.*?>
+<?import javafx.scene.effect.*?>
 <?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
 
-<AnchorPane prefHeight="400.0" prefWidth="472.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.afpa.gui.Exo3Controller">
+<AnchorPane prefHeight="469.0" prefWidth="472.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.afpa.gui.Exo3Controller">
    <children>
-      <Text layoutX="104.0" layoutY="76.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Ajout d'un fournissseur" wrappingWidth="265.853515625">
+      <Text layoutX="86.0" layoutY="54.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Ajout d'un fournissseur" wrappingWidth="265.853515625">
          <font>
             <Font name="Arial Bold" size="20.0" />
          </font>
       </Text>
-      <Text layoutX="90.0" layoutY="139.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Nom">
-         <font>
-            <Font size="13.0" />
-         </font>
-      </Text>
-      <Text layoutX="93.0" layoutY="183.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Rue">
-         <font>
-            <Font size="13.0" />
-         </font>
-      </Text>
-      <Text layoutX="78.0" layoutY="234.0" strokeType="OUTSIDE" strokeWidth="0.0" text="CP / Ville">
-         <font>
-            <Font size="13.0" />
-         </font>
-      </Text>
-      <Text layoutX="82.0" layoutY="278.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Contact">
-         <font>
-            <Font size="13.0" />
-         </font>
-      </Text>
-      <TextField fx:id="nom" layoutX="177.0" layoutY="121.0" prefHeight="25.0" prefWidth="221.0" />
-      <TextField fx:id="rue" layoutX="177.0" layoutY="165.0" prefHeight="25.0" prefWidth="221.0" />
-      <TextField fx:id="contact" layoutX="177.0" layoutY="260.0" prefHeight="25.0" prefWidth="221.0" />
-      <TextField fx:id="cp" layoutX="177.0" layoutY="217.0" prefHeight="25.0" prefWidth="67.0" />
-      <TextField fx:id="ville" layoutX="259.0" layoutY="217.0" prefHeight="25.0" prefWidth="139.0" />
-      <Button fx:id="annuler" alignment="CENTER" layoutX="330.0" layoutY="330.0" mnemonicParsing="false" prefHeight="32.0" prefWidth="73.0" style="-fx-background-color: #dc75d2;" text="Annuler" textFill="#fffefe">
-         <effect>
-            <DropShadow color="#0000008f" />
-         </effect>
-      </Button>
-      <Button fx:id="ajouter" layoutX="220.0" layoutY="330.0" mnemonicParsing="false" prefHeight="32.0" prefWidth="73.0" style="-fx-background-color:#ec60cc;" text="Ajouter" textFill="WHITE">
-         <effect>
-            <DropShadow color="#000000b2" />
-         </effect>
-      </Button>
+      <VBox layoutX="97.0" layoutY="105.0" prefHeight="259.0" prefWidth="278.0" spacing="10.0">
+         <children>
+            <HBox spacing="35.0">
+               <children>
+                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Nom">
+                     <font>
+                        <Font size="13.0" />
+                     </font>
+                  </Text>
+                  <VBox prefHeight="42.0" prefWidth="283.0">
+                     <children>
+                        <TextField fx:id="nom" prefHeight="25.0" prefWidth="218.0" />
+                        <Label fx:id="nomError" prefHeight="17.0" prefWidth="223.0" textFill="#f0078a" />
+                     </children>
+                  </VBox>
+               </children>
+            </HBox>
+            <HBox spacing="40.0">
+               <children>
+                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Rue">
+                     <font>
+                        <Font size="13.0" />
+                     </font>
+                  </Text>
+                  <VBox prefHeight="42.0" prefWidth="244.0">
+                     <children>
+                        <TextField fx:id="rue" prefHeight="25.0" prefWidth="213.0" />
+                        <Label fx:id="adreseError" prefHeight="17.0" prefWidth="243.0" textFill="#f0078a" />
+                     </children>
+                  </VBox>
+               </children>
+            </HBox>
+            <HBox spacing="12.0">
+               <children>
+                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="CP / Ville">
+                     <font>
+                        <Font size="13.0" />
+                     </font>
+                  </Text>
+                  <VBox>
+                     <children>
+                        <HBox spacing="20.0">
+                           <children>
+                              <TextField fx:id="cp" prefHeight="25.0" prefWidth="94.0" />
+                              <TextField fx:id="ville" prefHeight="25.0" prefWidth="134.0" />
+                           </children>
+                        </HBox>
+                        <Label fx:id="cpError" prefHeight="17.0" prefWidth="226.0" textFill="#f0078a" />
+                        <Label fx:id="villeError" prefHeight="17.0" prefWidth="226.0" textFill="#f0078a" />
+                     </children>
+                  </VBox>
+               </children>
+            </HBox>
+            <HBox spacing="20.0">
+               <children>
+                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Contact">
+                     <font>
+                        <Font size="13.0" />
+                     </font>
+                  </Text>
+                  <VBox>
+                     <children>
+                        <TextField fx:id="contact" prefHeight="25.0" prefWidth="221.0" />
+                        <Label fx:id="contactError" prefHeight="17.0" prefWidth="221.0" textFill="#f0078a" />
+                     </children>
+                  </VBox>
+               </children>
+            </HBox>
+         </children>
+      </VBox>
+      <HBox layoutX="147.0" layoutY="364.0" spacing="40.0">
+         <children>
+            <Button fx:id="ajouter" mnemonicParsing="false" onAction="#add" prefHeight="32.0" prefWidth="88.0" style="-fx-background-color:#ec60cc;" text="Ajouter" textFill="WHITE">
+               <effect>
+                  <DropShadow color="#000000b2" />
+               </effect>
+            </Button>
+            <Button fx:id="annuler" alignment="CENTER" mnemonicParsing="false" onAction="#reset" prefHeight="32.0" prefWidth="84.0" style="-fx-background-color: #dc75d2;" text="Annuler" textFill="#fffefe">
+               <effect>
+                  <DropShadow color="#0000008f" />
+               </effect>
+            </Button>
+         </children>
+      </HBox>
    </children>
 </AnchorPane>
