@@ -1,3 +1,6 @@
 <resources>
     <string name="app_name">MonDeAfpa</string>
+    <string name="button">BUTTON</string>
+    <string name="faces">faces</string>
+    <string name="faces_number">Faces_number</string>
 </resources>
