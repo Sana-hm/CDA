@@ -14,6 +14,7 @@ import retrofit2.Retrofit;
 import retrofit2.converter.gson.GsonConverterFactory;
 import retrofit2.http.GET;
 import retrofit2.http.Path;
+import retrofit2.http.Query;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -24,7 +25,7 @@ public class MainActivity extends AppCompatActivity {
 
     public interface JsonPlaceHolderApi {
         @GET("posts")
-        Call<List<Post>> getPosts();
+        Call<List<Post>> getPosts(@Query("userId") int userId);
 
         @GET("posts/{id}/comments")
         Call<List<Comment>> getComments(@Path("id") int postId);
@@ -45,14 +46,14 @@ public class MainActivity extends AppCompatActivity {
         jsonPlaceHolderApi = retrofit.create(JsonPlaceHolderApi.class);
 
 
-        //getPosts();
+        getPosts(4);
 
-        getComments();
+//        getComments();
     }
 
     // méthode pour récupérer l'intégralité des posts
-    private void getPosts(){
-        Call<List<Post>> call = jsonPlaceHolderApi.getPosts();
+    private void getPosts(int userId){
+        Call<List<Post>> call = jsonPlaceHolderApi.getPosts(userId);
 
         call.enqueue(new Callback<List<Post>>() {
             @Override
