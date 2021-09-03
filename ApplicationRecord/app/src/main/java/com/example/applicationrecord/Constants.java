@@ -3,7 +3,7 @@ package com.example.applicationrecord;
 public class Constants {
 
     //  base url qui note api
-    private static final String ROOT_URL = "https://127.0.1.1:8000/model/api/";
+    private static final String ROOT_URL = "http://10.0.2.2:8000/product/";
 
 
     // le nom du fichier utilisé

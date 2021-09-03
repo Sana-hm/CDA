@@ -1,103 +1,88 @@
 package com.example.applicationrecord;
 
+
 public class Disc {
 
     private int id;
     private String title;
-    private String year;
+    private int year;
     private String picture;
     private String label;
     private String genre;
     private int price;
     private String artist;
 
-        public Disc(int id ,String artist, String title, String label, String year, String genre, String picture) {
-            this.id=id;
-            this.artist = artist;
-            this.title = title;
-            this.label = label;
-            this.year = year;
-            this.genre = genre;
-            this.picture = picture;
-        }
+    public Disc(int id ,String artist, String title, String label, int year, String genre, String picture) {
+        this.id=id;
+        this.artist = artist;
+        this.title = title;
+        this.label = label;
+        this.year = year;
+        this.genre = genre;
+        this.picture = picture;
+    }
 
-            public int getId() {
-                return id;
-            }
+    public int getId() {
+        return id;
+    }
 
+    public void setId(int id) {
+        this.id = id;
+    }
 
-            public void setId(int id) {
-                this.id = id;
-            }
+    public String getTitle() {
+        return title;
+    }
 
+    public void setTitle(String title) {
+        this.title = title;
+    }
 
-            public String getTitle() {
-                return title;
-            }
+    public int getYear() {
+        return year;
+    }
 
+    public void setYear(int year) {
+        this.year = year;
+    }
 
-            public void setTitle(String title) {
-                this.title = title;
-            }
+    public String getPicture() {
+        return picture;
+    }
 
+    public void setPicture(String picture) {
+        this.picture = picture;
+    }
 
-            public String getYear() {
-                return year;
-            }
+    public String getLabel() {
+        return label;
+    }
 
+    public void setLabel(String label) {
+        this.label = label;
+    }
 
-            public void setYear(String year) {
-                this.year = year;
-            }
+    public String getGenre() {
+        return genre;
+    }
 
+    public void setGenre(String genre) {
+        this.genre = genre;
+    }
 
-            public String getPicture() {
-                return picture;
-            }
+    public Integer getPrice() {
+        return price;
+    }
 
+    public void setPrice(Integer price) {
+        this.price = price;
+    }
 
-            public void setPicture(String picture) {
-                this.picture = picture;
-            }
+    public String getArtist() {
+        return artist;
+    }
 
-
-            public String getLabel() {
-                return label;
-            }
-
-
-            public void setLabel(String label) {
-                this.label = label;
-            }
-
-
-            public String getGenre() {
-                return genre;
-            }
-
-
-            public void setGenre(String genre) {
-                this.genre = genre;
-            }
-
-
-            public Integer getPrice() {
-                return price;
-            }
-
-
-            public void setPrice(Integer price) {
-                this.price = price;
-            }
-
-
-            public String getArtist() {
-                return artist;
-            }
-
-
-            public void setArtist(String artist) {
-                this.artist = artist;
-            }
-
+    public void setArtist(String artist) {
+        this.artist = artist;
+    }
 }

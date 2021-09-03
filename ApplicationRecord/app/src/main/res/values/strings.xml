@@ -1,3 +1,9 @@
 <resources>
     <string name="app_name">Application Record</string>
+    <string name="disctitle">disctitle</string>
+    <string name="artistname">artistname</string>
+    <string name="discLabel">discLabel</string>
+    <string name="discYear">discYear</string>
+    <string name="discGenre">discGenre</string>
+    <string name="details">details</string>
 </resources>
